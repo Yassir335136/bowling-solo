@@ -19,7 +19,7 @@
                         <x-nav-link
                             :href="route('reservering.index') . '?date=' . \Carbon\Carbon::today()->format('Y-m-d')"
                             :active="request()->routeIs('reservering.index')">
-                            {{ __('Reservaties') }}
+                            {{ __('Uitslag') }}
                         </x-nav-link>
                     @endif
                     @if(\Illuminate\Support\Facades\Auth::user()->role === 'Admin' || \Illuminate\Support\Facades\Auth::user()->role === 'Owner')

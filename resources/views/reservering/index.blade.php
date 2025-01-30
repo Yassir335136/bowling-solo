@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex justify-between items-center">
             <h2 class="font-semibold text-lg text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('Bowling Banen') }}
+                {{ __('Overzicht Uitslagen') }}
             </h2>
         </div>
     </x-slot>
@@ -34,7 +34,6 @@
                             <table class="min-w-full bg-white dark:bg-gray-800 text-xs">
                                 <thead>
                                 <tr class="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-200 uppercase">
-                                    <th class="py-2 px-3 text-left">Reserveringsnummer</th>
                                     <th class="py-2 px-3 text-left">Naam</th>
                                     <th class="py-2 px-3 text-left">Aantal Punten</th>
                                     <th class="py-2 px-3 text-left">Datum</th>
@@ -43,8 +42,6 @@
                                 <tbody>
                                 @foreach ($uitslagen as $uitslag)
                                     <tr class="border-b border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-
-                                        <td class="py-2 px-3">{{ $uitslag->spel->reservering->ReserveringsNummer }}</td>
 
                                         <td class="py-2 px-3">{{ $uitslag->spel->persoon->first_name }} {{ $uitslag->spel->persoon->last_name }}</td>
 

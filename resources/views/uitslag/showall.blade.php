@@ -34,7 +34,7 @@
 
                                         <!-- Action buttons for Show, Edit, Delete (if you want to implement them) -->
                                         <td class="py-2 px-3 flex space-x-2">
-                                            <a href="{{ route('uitslag.edit', $uitslag->id) }}" class="text-blue-500 hover:underline">Edit</a>
+                                            <a href="{{ route('uitslag.edit', $uitslag->id) }}" class="text-blue-500 hover:underline">Wijzigen</a>
                                         </td>
                                     </tr>
                                 @endforeach
