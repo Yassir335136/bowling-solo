@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Reservering;
+use App\Models\Spel;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;

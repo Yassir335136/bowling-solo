@@ -3,8 +3,10 @@
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\Employees;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReserveringController;
 use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\UitslagController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,8 +14,9 @@ Route::get('/', function () {
 });
 
 Route::middleware(\App\Http\Middleware\Admin::class)->group(function () {
-    Route::resource('/rows', \App\Http\Controllers\BowlingLane::class);
-    Route::resource('employees', EmployeeController::class);
+    Route::get('/uitslag', [UitslagController::class, 'showAll'])->name('uitslag.showall');
+    Route::get('/uitslag/{id}', [UitslagController::class, 'edit'])->name('uitslag.edit');
+    Route::put('/uitslag/{id}', [UitslagController::class, 'update'])->name('uitslag.update');
 });
 
 
@@ -22,7 +25,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::resource('reservations', ReservationController::class);
+    Route::resource('/reservering', ReserveringController::class);
 });
 
 Route::middleware('auth')->group(function () {
@@ -31,7 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/scores', [App\Http\Controllers\ScoreController::class, 'index'])->name('scores.index');
+
 
 
 require __DIR__ . '/auth.php';
