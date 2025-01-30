@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -23,7 +24,7 @@ class UitslagController extends Controller
         return view('uitslag.edit', ['uitslag' => $uitslag]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) : RedirectResponse
     {
         // Validate the points input
         $request->validate([

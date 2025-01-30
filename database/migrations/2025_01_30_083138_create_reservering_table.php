@@ -21,11 +21,11 @@ return new class extends Migration
             $table->integer('ReserveringStatusId', false, true);
             $table->string('ReserveringsNummer', 20);
             $table->date('Datum');
-            $table->integer('AantalUren', false, true);
+            $table->tinyInteger('AantalUren', false, true);
             $table->time('BeginTijd');
             $table->time('EindTijd');
-            $table->integer('AantalVolwassen', false, true);
-            $table->integer('AantalKinderen', false, true);
+            $table->tinyInteger('AantalVolwassen', false, true);
+            $table->tinyIncrements('AantalKinderen', false, true);
             $table->timestamps();
         });
     }

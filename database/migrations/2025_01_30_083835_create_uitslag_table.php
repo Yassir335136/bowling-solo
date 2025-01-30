@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('uitslag', function (Blueprint $table) {
             $table->id();
             $table->foreignId('SpelId')->constrained('spel')->cascadeOnDelete();
-            $table->integer('AantalPunten', false, true);
+            $table->tinyInteger('AantalPunten', false, true)    ;
             $table->timestamps();
         });
     }

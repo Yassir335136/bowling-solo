@@ -18,7 +18,7 @@
                             <table class="min-w-full bg-white dark:bg-gray-800 text-xs">
                                 <thead>
                                 <tr class="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-200 uppercase">
-                                    <th class="py-2 px-3 text-left">Voornaam</th>
+                                    <th class="py-2 px-3 text-left">Naam</th>
                                     <th class="py-2 px-3 text-left">Score</th>
                                     <th class="py-2 px-3 text-left">Wijzigen</th>
                                 </tr>
