@@ -33,7 +33,7 @@ class UitslagController extends Controller
             'AantalPunten.required' => 'Het aantal punten is verplicht.',
             'AantalPunten.integer' => 'Het aantal punten moet een geheel getal zijn.',
             'AantalPunten.min' => 'Het aantal punten moet groter dan of gelijk aan 0 zijn.',
-            'AantalPunten.max' => 'Het aantal punten mag niet groter zijn dan 300.',
+            'AantalPunten.max' => 'Het aantal punten is niet geldig, voer een waarde in kleiner of gelijk aan 300',
         ]);
 
         // Find the Uitslag record
