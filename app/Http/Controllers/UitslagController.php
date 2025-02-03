@@ -13,7 +13,6 @@ class UitslagController extends Controller
         $uitslagen = \App\Models\Uitslag::with(['spel.persoon'])
                 ->get();
 
-
         return view('uitslag.showall', ['uitslagen' => $uitslagen]);
     }
 

@@ -16,12 +16,14 @@ return new class extends Migration
             $table->integer('PersoonId', false, true);
             $table->string('first_name', 20);
             $table->string('last_name', 20);
+            $table->string('nickname', 20);
             $table->string('email', 320 )->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->enum('role', ['Owner', 'Admin', 'User'])->default('User');
             $table->boolean('IsActive')->default(true);
+            $table->boolean('isAdult')->default(true);
             $table->string('comment', 255)->nullable();
             $table->timestamps();
         });

@@ -17,14 +17,13 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
+            'PersoonId' => 1,
             'first_name' => 'Donny',
             'last_name' => 'Walter',
+            'nickname' => 'Donny',
             'email' => 'donnywalter@gmail.com',
             'password' => Hash::make('password'),
             'role' => 'Owner'
         ]);
-
-        // Create 5 more random users
-        User::factory()->count(5)->create();
     }
 }
