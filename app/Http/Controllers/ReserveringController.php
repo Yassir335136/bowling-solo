@@ -47,13 +47,4 @@ class ReserveringController extends Controller
             'uitslagen' => $uitslagen,
         ]);
     }
-
-    /**
-     * Show all resources
-     */
-    public function showAll() : View
-    {
-        $uitslagen = [];
-        return view('reservering.showAll', ['uitslagen' => $uitslagen]);
-    }
 }
